@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký - Học Đường 24h</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Học Đường 24h</a>
+      <div class="nav-auth" id="authArea"></div>
+    </div>
+  </nav>
+
+  <div class="auth-wrapper">
+    <div class="auth-box">
+      <h2>Đăng ký tài khoản</h2>
+
+      <div id="alert" class="alert"></div>
+
+      <form onsubmit="handleRegister(event)">
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" id="fullname" placeholder="Nhập họ và tên">
+        </div>
+
+        <div class="form-group">
+          <label>Tên đăng nhập</label>
+          <input type="text" id="username" placeholder="Tối thiểu 4 ký tự">
+        </div>
+
+        <div class="form-group">
+          <label>Mật khẩu</label>
+          <input type="password" id="password" placeholder="Tối thiểu 6 ký tự">
+        </div>
+
+        <div class="form-group">
+          <label>Xác nhận mật khẩu</label>
+          <input type="password" id="confirm" placeholder="Nhập lại mật khẩu">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Đăng ký</button>
+      </form>
+
+      <div class="auth-footer">
+        Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Học Đường 24h</div>
+      <p>Đồ án học tập • LocalStorage chỉ dùng cho mục đích giáo dục</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+</body>
+</html>

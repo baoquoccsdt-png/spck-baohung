@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học Đường 24h - Trang chủ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Học Đường 24h</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="thong-ke.html">Thống kê</a></li>
+        <li><a href="loi-khuyen.html">Lời khuyên</a></li>
+        <li><a href="duong-day-nong.html">Đường dây nóng</a></li>
+      </ul>
+      <div class="nav-auth" id="authArea"></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Áp lực gia đình & <span>Bạo lực học đường</span></h1>
+      <p>Nơi cập nhật những câu chuyện, nghiên cứu và giải pháp thực tế giúp học sinh Việt Nam học tập trong môi trường an toàn hơn.</p>
+      <a href="news.html" class="btn btn-primary">Xem tất cả tin tức</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Tin nổi bật</h2>
+      <div class="news-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Học Đường 24h</div>
+      <p>Đồ án học tập • LocalStorage chỉ dùng cho mục đích giáo dục</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/news.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeatured();
+    });
+  </script>
+</body>
+</html>

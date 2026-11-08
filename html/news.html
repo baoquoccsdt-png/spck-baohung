@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin tức - Học Đường 24h</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Học Đường 24h</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="news.html" class="active">Tin tức</a></li>
+        <li><a href="thong-ke.html">Thống kê</a></li>
+        <li><a href="loi-khuyen.html">Lời khuyên</a></li>
+        <li><a href="duong-day-nong.html">Đường dây nóng</a></li>
+      </ul>
+      <div class="nav-auth" id="authArea"></div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Tất cả tin tức</h2>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm theo từ khóa..." oninput="searchNews()">
+      </div>
+
+      <div class="filter-btns">
+        <button class="filter-btn active" onclick="filterNews('all')">Tất cả</button>
+        <button class="filter-btn" onclick="filterNews('pressure')">Áp lực gia đình</button>
+        <button class="filter-btn" onclick="filterNews('violence')">Bạo lực học đường</button>
+        <button class="filter-btn" onclick="filterNews('solution')">Giải pháp & Hỗ trợ</button>
+      </div>
+
+      <div class="news-grid" id="newsGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Học Đường 24h</div>
+      <p>Đồ án học tập • LocalStorage chỉ dùng cho mục đích giáo dục</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/news.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNews(newsData);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin cá nhân - Học Đường 24h</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Học Đường 24h</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="profile.html" class="active">Cá nhân</a></li>
+      </ul>
+      <div class="nav-auth" id="authArea"></div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="profile-card" id="profileCard">
+      <!-- Nội dung sẽ được render bằng JS -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Học Đường 24h</div>
+      <p>Đồ án học tập • LocalStorage chỉ dùng cho mục đích giáo dục</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = checkLogin(); // Nếu chưa đăng nhập sẽ chuyển về login
+      if (user) {
+        document.getElementById('profileCard').innerHTML = `
+          <h2>Thông tin cá nhân</h2>
+          <div class="profile-info"><span>Họ và tên:</span> <strong>${user.fullname}</strong></div>
+          <div class="profile-info"><span>Tên đăng nhập:</span> <strong>${user.username}</strong></div>
+          <br>
+          <button onclick="logout()" class="btn btn-danger">Đăng xuất</button>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
